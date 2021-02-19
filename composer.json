@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "GladePay\\": "src/GladePay/"
+            "onubrooks\\GladePay\\": "src/GladePay/"
         }
     }
 }
