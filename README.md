@@ -36,7 +36,7 @@ $glade = new onubrooks\GladePay();
 ```php
 
 $amount = 30000;
-$user = '
+$user_data = '
 {
     "firstname":"John",
     "lastname":"Wick",
@@ -46,11 +46,11 @@ $user = '
 }
 ';
 $business_name = "Happy Glade Customer";
-$user_data = json_decode($user);
+$user = json_decode($user_data);
 
 //Initiate a bank transfer Transaction, country and currency are optional and defaults to 'NG' and 'NGN'
-// user and business name are also optional
-$transaction = $glade->bankTransfer($amount, $user_data, $business_name);
+// user and business_name are also optional
+$transaction = $glade->bankTransfer($amount, $user, $business_name);
 
 //After the transaction is completed, verify to confirm final status.
 $verification = $glade->verify("GP008928746Y");
@@ -61,4 +61,4 @@ $verification = $glade->verify("GP008928746Y");
 
 All methods return an array.
 
-Find other repos by the same author at [my github profile](https://github.com/onubrooks).
+Find other repos by the same author at his [github profile](https://github.com/onubrooks).
