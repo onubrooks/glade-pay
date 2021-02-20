@@ -10,7 +10,7 @@ namespace onubrooks\GladePay;
  *
  * @author Abah Onuh <abahonuh@gmail.com.com>
  */
-class Index
+class GladePay
 {
     /**
      * private HTTP client variable

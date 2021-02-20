@@ -27,7 +27,11 @@ Or run the following command in your project:
 Instantiate the GladePay Class:
 
 ```php
-$glade = new onubrooks\GladePay();
+require_once __DIR__ . '/vendor/autoload.php';
+
+use onubrooks\GladePay\GladePay;
+
+$glade = new GladePay();
 
 ```
 
