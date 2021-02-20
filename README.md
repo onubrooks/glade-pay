@@ -22,6 +22,10 @@ Or run the following command in your project:
 
  `composer require onubrooks/glade-pay`
 
+Also install the guzzlehttp library:
+
+ `composer require guzzlehttp/guzzle:^7.0`
+
 ## Usage
 
 Instantiate the GladePay Class:
@@ -57,12 +61,44 @@ $user = json_decode($user_data);
 $transaction = $glade->bankTransfer($amount, $user, $business_name);
 
 //After the transaction is completed, verify to confirm final status.
-$verification = $glade->verify("GP008928746Y");
+$verification = $glade->verify("GP61548131820210220X");
 
 ```
 
 ## Return Values
 
 All methods return an array.
+
+Below are the fields returned in the array from the `bankTransfer` method with sample return values:
+
+```json
+{
+  "status": 202,
+  "txnRef": "GP61548131820210220X",
+  "auth_type": "device",
+  "accountNumber": "9922554842",
+  "accountName": "GladePay Demo",
+  "bankName": "Providus Bank",
+  "accountExpires": 600,
+  "message": "Make a transfer into the following account using your bank app or internet banking platfrom to complete the transaction"
+}
+```
+
+For the verify method, here's a sample of the returned values in the array:
+
+```json
+{
+  "status": 200,
+  "txnStatus": "pending",
+  "txnRef": "GP9225324020210220G",
+  "message": "PENDING",
+  "chargedAmount": 0,
+  "currency": "NGN",
+  "payment_method": "bank_transfer",
+  "fullname": "John Wick",
+  "email": "wick@gladeuniverse.com",
+  "bank_message": "Awaiting Validation"
+}
+```
 
 Find other repos by the same author at his [github profile](https://github.com/onubrooks).
