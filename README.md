@@ -46,7 +46,7 @@ $user_data = '
     "lastname":"Wick",
     "email":"wick@gladeuniverse.com",
     "ip":"192.168.10.5",
-    "fingerprint": "cccvxbxbxb"
+    "fingerprint": "cccvxbxbxbc"
 }
 ';
 $business_name = "Happy Glade Customer";

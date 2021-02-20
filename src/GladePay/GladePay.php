@@ -5,7 +5,7 @@ namespace onubrooks\GladePay;
 /**
  * GladePay Class
  * 
- * This class contains all functionality of the library. Various helper instance methods are provided to make
+ * This class contains all functionality of the gladepay library/package. Various helper instance methods are provided to make
  * interacting with the Glade API very painless and seamless.
  *
  * @author Abah Onuh <abahonuh@gmail.com.com>
