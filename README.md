@@ -22,10 +22,6 @@ Or run the following command in your project:
 
  `composer require onubrooks/glade-pay`
 
-Also install the guzzlehttp library:
-
- `composer require guzzlehttp/guzzle:^7.0`
-
 ## Usage
 
 Instantiate the GladePay Class:
