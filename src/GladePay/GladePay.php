@@ -70,6 +70,9 @@ class GladePay
      */
     public function verify($txnRef)
     {
+        if (empty($txnRef) || !isset($txnRef)) {
+            throw new \InvalidArgumentException('Transaction Ref is required.');
+        }
         $data = [
             "action" => "verify",
             "txnRef" => $txnRef
@@ -95,6 +98,10 @@ class GladePay
      */
     public function bankTransfer($amount, $user = null, $business_name = null, $country = 'NG', $currency = 'NGN')
     {
+        if(!is_int($amount) || $amount < 1)
+        {
+            throw new \InvalidArgumentException('Amount must be a positive integer.');
+        }
         $data = [
             "action" => "charge",
             "paymentType" => "bank_transfer",

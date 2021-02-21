@@ -17,5 +17,8 @@
         "psr-4": {
             "onubrooks\\GladePay\\": "src/GladePay/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
     }
 }

@@ -101,4 +101,14 @@ For the verify method, here's a sample of the returned values in the array:
 }
 ```
 
-Find other repos by the same author at his [github profile](https://github.com/onubrooks).
+## Running Tests
+
+The test cases can be run using the following command on windows command line:
+
+`php vendor/phpunit/phpunit/phpunit --bootstrap vendor/autoload.php tests`
+
+For bash users, use the following command:
+
+`php vendor/bin/phpunit --bootstrap vendor/autoload.php tests`
+
+Find other repos by the same author at this [github profile](https://github.com/onubrooks).

@@ -23,4 +23,4 @@ $transaction = $glade->bankTransfer($amount, $user, $business_name);
 
 $verification = $glade->verify($transaction["txnRef"]);
 
-echo var_dump($transaction);
+echo var_dump($verification);
