@@ -2,6 +2,8 @@
 
 namespace onubrooks\GladePay;
 
+use \GuzzleHttp\Client;
+
 /**
  * GladePay Class
  * 
@@ -32,7 +34,7 @@ class GladePay
     public function __construct( $merchantId = 'GP0000001', $merchantKey = '123456789', $api_endpoint = 'https://demo.api.gladepay.com/'){
         
         $requestHeaders = ['mid' => $merchantId, 'key' => $merchantKey];
-        $this->client = new \GuzzleHttp\Client(['Content-Type' => 'application/json', 'base_uri' => $api_endpoint, 'headers' => $requestHeaders]);
+        $this->client = new Client(['Content-Type' => 'application/json', 'base_uri' => $api_endpoint, 'headers' => $requestHeaders]);
     }
 
     /**

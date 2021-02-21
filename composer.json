@@ -3,7 +3,7 @@
     "description": "A small PHP library/package that uses the Glade API to make payments using bank transfer option.",
     "type": "library",
     "require": {
-        "guzzle/http": "^3.7@stable"
+        "guzzlehttp/guzzle": "7.0"
     },
     "license": "MIT",
     "authors": [
